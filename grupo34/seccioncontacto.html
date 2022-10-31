@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Grupo23 - CaC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="../ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="fa fa-home"></span>Servicio </a></li>
+                <li><a href="consultoria.html"><span class="fa fa-heading"></span>Consultoria</a></li>
+                <li><a href="metodologia.html"><span class="fa fa-edit"></span>Metodologia</a></li>
+                <li><a href="quienessomos.html"><span class="fa fa-code"></span>Quienes Somos</a></li>
+                <li><a href="seccioncontacto.html" class="active"><span class="fa fa-envelope"></span>Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section_container">
+            <section>
+                <h2>Formulario de contacto</h2>
+                <form action="/login.php" id="formulario">
+                    <div class="form_input centrado">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ej: Pepito">
+                    </div>
+                    <div class="form_input centrado">
+                        <label for="clave">Contraseña:</label>
+                        <input type="text" name="clave" id="clave" placeholder="Mínimo 6 caracteres">
+                    </div>
+                    <div class="form_input centrado">
+                        <input type="submit" value="Ingresar" id="botoningreso">
+                    </div>
+                </form>
+
+            </section>
+        </div>
+        
+    </main>
+    <footer class="container_footer">
+        <div class="redes_sociales">
+            <ul>
+                <li><a href="https://es-la.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.whatsapp.com/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.google.com.ar/maps" target="_blank" class="map"><i class="fa fa-map-marker"></i></a></li>
+            </ul>
+        
+        </div>
+    </footer>
+
+    <div class="fondo_transparente" id="lb">
+        <div class="modal">
+            <div class="modal_cerrar">
+                <span>x</span>
+            </div>
+            <div class="modal_titulo">ATENCIÓN</div>
+            <div class="modal_mensaje">
+                <p id="texto_error"></p>
+            </div>
+            <div class="modal_botones">
+                <button onclick="$('#lb').trigger('close');">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/jquery-latest.js"></script>
+    <script src="scripts/jquery.lightbox_me.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/validacioncontact.js"></script>
+</body>
+
+</html>

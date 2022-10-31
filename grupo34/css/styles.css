@@ -1,0 +1,799 @@
+﻿@import url('../../css2');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: url(../images/fondo.png);
+    background-size: auto;
+    background-position: center center;
+    height: calc(120vh - 120px);
+}
+
+header {
+    width: 800%;
+    position: fixed;
+}
+
+header nav {
+    background: #8c9ca0;
+}
+
+.menu_bar {
+    display: none;
+}
+
+header nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li span {
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background: #037E8C;
+    transition: all .5s;
+}
+
+header nav ul li a.active {
+    background: #037E8C;
+}
+
+section {
+    padding: 20px;
+}
+
+ul {
+    text-align: center;
+    transition: all .5s;
+}
+
+@media screen and (max-width:800px) {
+    header nav {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+        /*top:0px;*/
+        overflow: auto;
+    }
+
+    .menu_bar {
+        display: block;
+        width: 100%;
+        background: #ccc;
+    }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: #024959;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu_bar span {
+        float: right;
+        font-size: 40px;
+    }
+
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+
+    main {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    aside,
+    .section_container {
+        width: auto;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 75px;
+}
+
+button>i {
+    color: white;
+}
+
+.section_container {
+    width: 800px;
+    margin: 10px;
+}
+
+section {
+    margin: 10px;
+    background-color: rgba(246, 237, 237, 0.724);
+    border: 1px solid black;
+}
+
+section>p {
+    color: rgb(23, 23, 23);
+    margin-top: 10px;
+}
+
+aside {
+    background-color: rgba(246, 237, 237, 0.724);
+    width: 500px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 21px;
+    margin-right: 21px;
+    padding: 15px;
+}
+
+
+section>h1 {
+    padding: 10px;
+}
+
+.pregunta {
+    margin: 20px 0px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.h2_apirest {
+    margin: 20px 0px;
+}
+
+#listado_usuarios {
+    display: none;
+}
+
+/*FLEXBOX USUARIOS RESTAPI*/
+
+form {
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #ccc;
+}
+
+form label {
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+input,
+select {
+    width: 172px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+form input[type="button"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+}
+
+form input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.contenedor_usuarios {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: 110px 110px 110px 110px 110px;
+    grid-auto-flow: column;
+}
+
+.usuario {
+    background-color: #DDD;
+    color: white;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+.usuario_perfil {
+    display: flex;
+}
+
+.usuario_perfil>img {
+    width: 22%;
+    height: 22%;
+    margin: 12px;
+}
+
+.usuario_datos {
+    width: 70%;
+    color: black;
+    padding: 14px;
+}
+
+.usuario_nombre {
+    text-decoration: underline;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.usuario_genero {
+    font-size: 10pt;
+    margin-top: 4px;
+}
+
+.usuario_mail {
+    font-size: 9pt;
+    position: absolute;
+    margin-top: 74px;
+    text-align: center;
+    width: 257px;
+    color: rgb(0 0 0 / 80%);
+}
+
+.usuario_datos>p>i {
+    color: rgb(78, 75, 75);
+}
+
+.controles_apirest {
+    float: right;
+    margin: 10px 0px;
+}
+
+.loading_gif {
+    width: 50px;
+}
+
+.lb {
+    min-width: 300px;
+    min-height: 150px;
+    background-color: #EEE;
+    text-align: center;
+}
+
+/**/
+
+/*...................seccion HTML.......................*/
+.section_container1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
+    margin: 2%;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7{
+    background-color: rgba(246, 237, 237, 0.724);
+    color: rgb(23, 23, 23);
+}
+.section_container1 p {
+    padding: 10px;
+}
+.box1 {
+    width: 100%;
+    height: 620px;
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 3px 3px 4px rgb(0, 0, 0);
+    margin: 15px 0px;
+    padding: 10px;
+}
+
+
+.box2 {
+    width: 100%;
+    height: 170px;
+}
+
+.box2 img {
+    width: 170px;
+    height: 140px;
+    border-radius: 50%;
+    margin-top: 1%;
+    margin-left: 40%;
+}
+
+.box3 {
+    width: 100%;
+    height: auto;
+}
+
+.box4 {
+    width: 100%;
+    height: auto;
+}
+
+.box4 img {
+    width: 260px;
+    height: 100px;
+    margin-left: 35%;
+}
+
+.box5 {
+    width: 100%;
+    height: auto;
+}
+
+.box6 {
+    width: 100%;
+    height: auto;
+}
+
+.box6 img {
+    width: 300px;
+    height: auto;
+    padding-left: 30%;
+    padding-bottom: 2%;
+}
+
+.box7 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+.box7 a {
+    text-decoration: none;
+    color: #1aa3ff;
+}
+
+.box7 a:hover {
+    color: #000066;
+}
+
+/*.........................................FOOTER*/
+
+.container_footer { 
+    width: auto;
+    height: 100px;
+    background-color: hwb(130 90% 8%);
+    margin-top: 1%;
+ }
+ :root{
+    --facebook:#0000cc;
+    --instagram: #990099;
+    --twitter: #3366ff;
+    --whatsapp: #00cc44;
+    --map: #e81e1e;
+ }
+ .redes_sociales {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+ }
+ .redes_sociales ul li {
+    display: inline-block;
+    margin: 30px 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+ }
+ .redes_sociales ul li a{
+    display: block;
+    padding: 15px;
+    background-color: rgb(105, 104, 104);
+    color: #fff;
+    font-size: large;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+    border-radius: 50%;
+ }
+ .redes_sociales ul:hover a{
+    filter: blur(1px);
+ }
+ .redes_sociales ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+ }
+ .redes_sociales ul li .facebook:hover {
+    background: var(--facebook);
+ }
+ .redes_sociales ul li .instagram:hover {
+    background: var(--instagram);
+ }
+ .redes_sociales ul li .twitter:hover {
+    background: var(--twitter);
+ }
+ .redes_sociales ul li .whatsapp:hover {
+    background: var(--whatsapp);
+ }
+ .redes_sociales ul li .map:hover {
+    background: var(--map);
+ }
+/*.....................................FIN FOOTER*/
+
+
+/*Fin section*/
+
+/*Aside*/
+.card_container1 {
+    width: auto;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card_container1 >img {
+    width: 60%;
+    height: 60%;
+    margin-left: 5%;
+}
+.card_container1 {
+    width: 350px;
+    height: 260px;
+    border: 1px solid #000;
+    background-color: rgb(251, 251, 251);
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card_container1:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card_container1 img {
+    width: 280px;
+    height: 170px;
+    padding-left: 35px;
+}
+
+.card_container1 h3 {
+    text-align: center;
+    padding: 2px;
+}
+
+.card_container1 p {
+    text-align: center;
+    padding-top: 3px;
+}
+
+.card_container1 a {
+    text-decoration: none;
+    color: #1aa3ff;
+    padding-left: 40%;
+}
+
+.card_container1 a:hover {
+    color: #000066;
+}
+
+/*Fin aside*/
+
+
+/*...................fin seccion HTML...................*/
+
+
+/*......................seccion CSS ....................*/
+.section_container2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 100%;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5,
+.caja6,
+.caja7 {
+    /* background-color: rgba(246, 237, 237, 0.724); */
+    color: rgb(23, 23, 23);
+}
+
+.caja1 {
+    height: 120px;
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 3px 3px 4px rgb(0, 0, 0);
+}
+
+.caja2 img {
+    width: 40%;
+    height: auto;
+    margin-top: 50%;
+}
+
+.caja3 {
+    height: auto;
+    padding: 10px;
+}
+
+.caja3 img {
+    width: 60%;
+    padding-left: 15%;
+}
+
+.caja4 {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+}
+
+.caja5 {
+    width: 50%;
+    height: auto;
+}
+
+.caja5 img {
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.caja6 {
+    height: auto;
+    padding: 10px;
+}
+
+.caja7 {
+    height: auto;
+
+}
+
+.caja6 a {
+    text-decoration: none;
+    color: #1aa3ff;
+    float: right;
+}
+
+.caja6 a:hover {
+    color: #000066;
+}
+
+.card_container {
+    width: 350px;
+    height: 250px;
+    border: 1px solid #000;
+    background-color: rgb(251, 251, 251);
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card_container:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card_container img {
+    width: 280px;
+    height: 170px;
+    padding-left: 35px;
+}
+
+.card_container h3 {
+    text-align: center;
+    padding: 2px;
+}
+
+.card_container p {
+    text-align: center;
+    padding-top: 3px;
+}
+
+.card_container a {
+    text-decoration: none;
+    color: #1aa3ff;
+    padding-left: 40%;
+}
+
+.card_container a:hover {
+    color: #000066;
+}
+
+.caja_doble{
+    display: flex;
+}
+/*...................fin seccion CSS....................*/
+
+
+/*MODAL*/
+
+.fondo_transparente {
+    background: rgba(0, 0, 0, 0.226);
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal {
+    background: linear-gradient(0deg, white 70%, rgb(77, 74, 75) 30%);
+    width: 500px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.modal_cerrar {
+    background: white;
+    position: absolute;
+    right: 5px;
+    color: rgb(0, 0, 0);
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal_titulo {
+    color: white;
+    font-size: 20px;
+    margin-top: 44px;
+    padding: 0;
+    margin-bottom: -24px;
+}
+
+.modal_mensaje {
+    padding: 10px 10px;
+}
+
+#texto_error {
+    margin-top: 40px;
+}
+
+.modal_botones {
+    width: 100%;
+    background: whitesmoke;
+    border-top: whitesmoke 1px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton {
+    background: white;
+    padding: 8px 30px;
+    color: crimson;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 1px solid crimson
+}
+
+.boton:hover {
+    background: crimson;
+    color: white;
+}
+
+/*fin modal*/
+/*...................seccion CONTACTO...................*/
+.section_container4 {
+    width: 600px;
+    height: 500px;
+    background-color: transparent;
+    margin-top: 2%;
+}
+
+.contactoform h2 {
+    padding-left: 13%;
+    padding-bottom: 5%;
+}
+
+.contactoform {
+    width: 400px;
+    height: 400px;
+    background-color: #bdbdc0;
+    padding: 5%;
+    border-radius: 1em;
+    box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#formulario {
+    width: auto;
+    height: auto;
+    background-color: rgb(118, 158, 180);
+    border: 1px solid black;
+    padding: 5%;
+    border-radius: 1em;
+}
+
+#botoningreso {
+    border: 2px solid #ececee;
+    border-radius: 1em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#botoningreso:hover {
+    background-color: rgb(29, 57, 78);
+    color: #ececee;
+    border: 2px solid #ececee;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.form_input {
+    display: inline-block;
+    width: 100%;
+}
+
+/*...................fin seccion CONTACTO...............*/
+
+.derecha {
+    text-align: right;
+}
+
+input[type="radio"]{
+    display: inline-block;
+    width: 23px;
+}
+.radio_container{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
